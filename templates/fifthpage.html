@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Access</title>
+    <style>
+        /* Input Box Styles */
+        body {
+            background-color: rgb(15, 11, 11);
+            margin: 0;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 50px;
+            height: 100vh;
+        }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .input-box {
+            width: 500px;
+            height: 40px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            font-size: 25px;
+            padding: 5px;
+        }
+
+        .submit-btn {
+            width: 150px;
+            height: 40px;
+            color: rgb(199, 30, 30);
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button {
+          padding: 10px 20px;
+          font-size: 16px;
+          background-color: #149a4c;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        
+    </style>
+
+    
+    <style>
+    .right-side-up {
+        float: right;
+        width: 300px;
+        height: 100px;
+    }
+ </style>
+<img src="{% static 'reintech-logo.jpeg' %}" class="right-side-up">
+    
+</head>
+<body>
+    <h1>Template Access</h1>
+
+    <div class="input-container">
+        
+        
+        <input type="text" class="input-box" placeholder="Template name">
+        <input type="text" class="input-box" placeholder="Template sub category / type">
+        <input type="text" class="input-box" placeholder="Template number">
+        <div class="row">
+        <button class="button">Browse Template</button>
+        <button class="button">Create /Edit template</button>
+      </div>
+    </div>
+</body>
+</html>
